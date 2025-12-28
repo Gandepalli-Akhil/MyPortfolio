@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navigation Bar</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <style>
+            body{
+                background-color: #dfe7ee;
+            }
+            .parent{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                position:static;
+                top:10px;
+                background-color:black;
+                padding:0px 50px;
+                height:120px;
+                width:100%;
+                justify-content:space-between;
+                align-items: center;
+                border-bottom: 3px solid #e5e7eb;
+                box-shadow: 0px 0px 10px #e5e7eb;
+                gap:10px;
+                border-radius: 15px;
+            }
+            .parent-sections{
+                display: flex;
+                height:auto;
+                width:70%;
+                flex-direction: row;
+                flex-wrap: wrap;
+                background-color:  #0e0101;
+                padding:0px 50px;
+                justify-self:center;
+                justify-content: center;
+                align-items: center;
+                margin-top: 40px;
+                border-bottom: 3px solid #e5e7eb;
+                gap:10px;
+                border-radius: 15px;
+                box-shadow: 0px 0px 20px rgb(13, 2, 228);
+                transition-property: all;
+                transition-timing-function: ease-in-out;
+                transition-duration: 1s;
+                transition-delay: 0s;
+            }
+            .parent-sections:hover{
+                transform: scale(1.03,1.03);
+                box-shadow: 0 0 30px rgba(9, 213, 253, 0.6);
+            }
+            html{
+                scroll-behavior: smooth;
+            }
+            #para{
+                color:aliceblue;
+            }
+            #para::first-letter{
+                text-transform: uppercase;
+                color:#06b6d4;
+                font-size:40px;
+            }
+            #skill,#PROJECT{
+                 color:aliceblue;
+                 font-size: 30px;
+                 text-align: center;
+            }
+            .project-link,#Contact{
+                font-size: 25px;
+                color:antiquewhite;
+                text-shadow: 0px 0px 2px white;
+            }
+            .project-link:hover{
+                color:#06b6d4;
+            }
+            .child{
+                letter-spacing: 1px;
+                background-color:black;
+            }
+            h1{
+                font-size: 40px;
+                font-weight: bolder;
+                background: linear-gradient(90deg, #2563eb, #06b6d4);
+                color: transparent;
+                -webkit-background-clip:text ;
+                transition-property: all;
+                transition-duration: 0.1s;
+                transition-timing-function: ease-in-out;
+                transition-delay: 0s;
+            }
+            .skill-items{
+                color:aqua;
+            }
+             .skill-items:hover{
+                transform: scale(1.2);
+                color:aqua;
+                text-shadow: 0px 0px 5px white;
+            }
+            h1:hover{
+                font-size:50px;
+            }
+            p{
+                font-size: 20px;
+            }
+           #italic{
+            display: flex;
+            gap:60px;
+            background-color:transparent;
+            text-decoration: none;
+           }
+           ul{
+            list-style: none;
+           }
+           #instagram{
+            font-size: 30px;
+            margin:15px;
+            color:palevioletred;
+             cursor: pointer;
+            text-shadow:0px 0px 5px #ef03a4;
+            transition-property: all 0.2s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s;
+           }
+            #linkedin{
+            font-size:30px;
+            margin:15px;
+            color:#2563eb;
+             cursor: pointer;
+            text-shadow:0px 0px 5px #2b2b2c;
+            transition-property: all 0.2s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s;
+           }
+            #Github{
+            font-size: 30px;
+            margin:10px;
+            color:brown;
+             cursor: pointer;
+            text-shadow:0px 0px 5px #363636;
+            transition-property: all 0.2s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s;
+           }
+           #Whatsapp{
+            font-size: 30px;
+            margin:10px;
+            color:green;
+            cursor: pointer;
+            text-shadow:0px 0px 5px #e5e7eb;
+            transition-property: all 0.2s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s;
+           }
+           #Whatsapp:hover,#instagram:hover,#Github:hover,#linkedin:hover{
+            font-size: 50px;
+           }
+           #h3{
+            font-size: xx-large;
+           }
+           #ABOUT,#SKILLS,#Details{
+            color: #f9fafb;
+            text-align:center;
+            font-size: 30px;
+           }
+           img{
+            width:100px;
+            height:100px;
+            border-radius: 50%;
+            transition: transform 0.2s ease-in-out;
+           }
+           img:hover{
+            transform: scale(1.3);
+           }
+           a{
+            text-decoration: none;
+           }
+           .list a{
+            font-size:18px;
+            background:transparent;
+            color:aqua;
+            transition-property: all;
+            transition-duration:0.1s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s;
+            text-decoration: none;
+            font-weight: bolder;
+            cursor: pointer;
+           }
+           .list:hover a{
+            background-color:black;
+            font-size: 20px;
+            text-shadow: 0px 0px 25px white;
+           }
+           @media screen and (max-width:480px){
+            body{
+                color:white;
+            }
+            .parent{
+                flex-direction: column;
+                font-size:10px;
+                height:auto;
+                padding: 10px;
+            }
+            .parent-sections{
+                flex-direction: column;
+            }
+            h1{
+                font-size: 30px;
+            }
+            img{
+                width:80px;
+                height:80px;
+            }
+            #italic{
+                flex-direction: column;
+                gap:20px;
+            }
+           }
+           @media screen and (max-width:768px) {
+            body{
+                background-color: aliceblue;
+            }
+            .parent{
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+            }
+            .parent-sections{
+                flex-direction: column;
+                width:80%;
+            }
+             #italic{
+                flex-wrap:wrap;
+                gap:30px;
+           }
+            h1{
+                font-size: 35px;
+            }
+           }
+           @media screen and (max-width:992px) {
+            .parent-sections{
+                width:72%;
+                height:auto;
+            }
+            #italic{
+                gap:40px;
+            }
+        }
+           footer{
+            text-align: center;
+            color:black;
+            font-size: 14px;
+           }
+           #tagline{
+            text-align: center;
+            color:rgb(238, 233, 233);
+            font-size:18px;
+            margin-top:1px;
+           }
+           .header-text h1{
+            display:flex;
+            background-color: transparent;
+            align-items:flex-start;
+            margin :0px;
+            flex-direction: column;
+           }
+           
+        </style>
+    </head>
+        <body>
+            <header>
+              <div class="parent">
+                <img src="allimages/day12.jpg" alt="AKHIL GANDEPALLI" loading="lazy">
+               <div class="header-text">
+                <h1>Akhil Gandepalli</h1> 
+                <p id="tagline">Aspiring Full-Stack Developer | Java . React . Web</p>
+                    </div>
+                    <div class="child">
+                 <nav>
+        <ul id="italic">
+            <li class="list"><a href="#about" >About</a></li>
+             <li class="list"><a href="#skill" >Skills</a></li>
+        <li class="list"><a href="#projects">Projects</a></li>
+          <li class="list"><a href="#Contact">Contact/Connect</a></li> 
+    </ul>
+       </nav>
+              </div> 
+              </div>
+            </header>
+            <main>              <div class="parent-sections">
+            <section id="about">
+        
+                <h3 id="ABOUT">About</h3>
+
+          <p id="para">Hi, I am Akhil Gandepalli, currently learning web development.
+I am pursuing B.Tech from Raghu Engineering College and exploring the world of HTML, CSS, and JavaScript.
+I completed my 10th class with 80% and +2 (Intermediate) with 90%.
+I have a strong interest in coding and problem-solving, and I enjoy creating projects that help me learn new technologies.
+My goal is to become a skilled full-stack web developer and build modern, user-friendly websites.
+I am passionate about continuous learning, improving my skills, and contributing to meaningful projects in the tech world.</p>
+       
+</section>
+</div>
+     <div class="parent-sections">
+    <section id="skill">
+         <h3 id="SKILLS">Skills</h3>
+    <ul>
+        <li class="skill-items">C Programming</li>
+        <li class="skill-items">Java</li>
+        <li class="skill-items">Python(Basic)</li>
+        <li class="skill-items">HTML</li>
+        <li class="skill-items">CSS(Cascading Style Sheets)</li>
+    </ul>
+
+       </section>
+ </div>
+
+    <div class="parent-sections">
+       <section id="projects">
+        <h3 id="PROJECT">Projects</h3>
+   <ul>
+    <li><a href="https://github.com/Gandepalli-Akhil/JavaPaymentSystem/blob/main/AbstractionPaymentStatus.java" target="_blank" class="project-link"><strong>Java Payment System</strong></a>
+    <small>OOP Concepts,Abstraction</small></li>
+   <li><a href=" https://github.com/Gandepalli-Akhil/Encapsulation-Student-Marks-System" target="_blank" class="project-link">Java Student Report Card</a></li>
+   <li><a href="https://github.com/Gandepalli-Akhil/LibraryManagement/commit/6bac49331d7fe35b1a6926997168b168ff51244f " target="_blank" class="project-link">Java Library Management</a></li>
+   <li class="project-link">Login Page</li>
+   <li class="project-link">Registration  Form</li>
+   <li class="project-link">Image Gallery(html&CSS)</li>
+</ul>
+
+</section>
+</div>
+
+<div class="parent-sections">
+<section id="Contact">
+    <h3 id="Details">Contact/Connect</h3>
+    <ul id="icons">
+      <a href="https://www.linkedin.com/in/akhil-gandepalli-a239a6335/" target="_blank" id="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+     <a href="https://www.instagram.com/" target="_blank" id="instagram"><i class="fa-brands fa-instagram"></i></a>
+     <a href="https://github.com/Gandepalli-Akhil" target="blank"id="Github"><i class="fa-brands fa-github"></i></a>
+    <a href="https://wa.me/917337416349" target="_blank" id="Whatsapp"><i class="fa-brands fa-square-whatsapp"></i></a>
+    </ul>
+</section>
+</div>
+</main>
+<footer>
+    <p>© 2025 Akhil Gandepalli. All rights reserved.</p>
+</footer>
+        </body>
+</html>
